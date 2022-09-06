@@ -25,21 +25,22 @@ public class CheckoutSolution {
 		skus.put("A", 15);		
 	}
 	
-
-
-	
-    public Integer checkout(String skus) {
+    public Integer checkout(String itemsTobeCheckout) {
     	
-    	String items [] =  skus.split(",");
+    	String items [] =  itemsTobeCheckout.split(",");
+    	
+    	Integer sumItems = 0;
     	
     	for(int i = 0 ; i < items.length; i ++) {
     		
-    	}
-    	    	
+    		sumItems += skus.get(items[i]);
+    		
+    	}    	    	
     	
-        return 0;
+        return sumItems;
     }
 }
+
 
 
 

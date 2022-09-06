@@ -18,11 +18,12 @@ public class CheckOutSolutionTest {
 	@Test
 	public void testTotalItensNoDiscount() {
 		
-		Integer actual = checkOutSolution.checkout("");
-		Integer expected = 2;
-		assertEquals(actual, expected);		
+		Integer actual = checkOutSolution.checkout("A,B");
+		Integer expected = 80;
+		assertEquals(expected, actual);		
 		
 	}
 
 }
+
 
