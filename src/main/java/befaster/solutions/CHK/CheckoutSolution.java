@@ -60,7 +60,3 @@ public class CheckoutSolution {
         return sumItemsA + sumItemsB + otherItems;
     }
 }
-
-
-
-

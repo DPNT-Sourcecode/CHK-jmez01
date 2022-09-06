@@ -14,6 +14,15 @@ public class CheckOutSolutionTest {
 		
 		checkOutSolution = new CheckoutSolution();
 	}
+	
+	@Test
+	public void testTotalItens_Ilegal() {
+		
+		Integer actual = checkOutSolution.checkout("E");
+		Integer expected = 80;
+		assertEquals(expected, actual);		
+		
+	}
 
 	@Test
 	public void testTotalItens_NoDiscount_AB() {
@@ -89,6 +98,3 @@ public class CheckOutSolutionTest {
 
 
 }
-
-
-
