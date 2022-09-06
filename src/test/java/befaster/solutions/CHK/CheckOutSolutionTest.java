@@ -78,23 +78,6 @@ public class CheckOutSolutionTest {
 		
 	}
 	
-
-//	id = CHK_R1_012, req = checkout("A"), resp = 50
-//	id = CHK_R1_013, req = checkout("AA"), resp = -1
-//	id = CHK_R1_014, req = checkout("AAA"), resp = -1
-//	id = CHK_R1_015, req = checkout("AAAA"), resp = -1
-//	id = CHK_R1_016, req = checkout("AAAAA"), resp = -1
-//	id = CHK_R1_017, req = checkout("AAAAAA"), resp = -1
-//	id = CHK_R1_018, req = checkout("B"), resp = 30
-//	id = CHK_R1_019, req = checkout("BB"), resp = -1
-//	id = CHK_R1_020, req = checkout("BBB"), resp = -1
-//	id = CHK_R1_021, req = checkout("BBBB"), resp = -1
-//	id = CHK_R1_022, req = checkout("ABCDABCD"), resp = -1
-//	id = CHK_R1_023, req = checkout("BABDDCAC"), resp = -1
-//	id = CHK_R1_024, req = checkout("AAABB"), resp = -1
-//	id = CHK_R1_001, req = checkout("ABCDCBAABCABBAAA"), resp = -1
-//
-	
 	@Test
 	public void testTotalItens_Ilegal_ABCa() {
 		
@@ -126,6 +109,24 @@ public class CheckOutSolutionTest {
 	public void testTotalItens_Ilegal_AA() {
 		
 		Integer actual = checkOutSolution.checkout("AA");
+		Integer expected = -1;
+		assertEquals(expected, actual);		
+		
+	}	
+	
+	@Test
+	public void testTotalItens_Ilegal_AAA() {
+		
+		Integer actual = checkOutSolution.checkout("AAA");
+		Integer expected = -1;
+		assertEquals(expected, actual);		
+		
+	}	
+	
+	@Test
+	public void testTotalItens_Ilegal_AAAA() {
+		
+		Integer actual = checkOutSolution.checkout("AAAA");
 		Integer expected = -1;
 		assertEquals(expected, actual);		
 		
@@ -198,6 +199,7 @@ public class CheckOutSolutionTest {
 
 
 }
+
 
 
 
