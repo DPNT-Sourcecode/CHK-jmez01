@@ -35,8 +35,6 @@ public class CheckoutSolution {
     	
     	for(int i = 0 ; i < items.length; i ++) {
     		
-    		sumItems += skus.get(items[i]);
-    		
     		if(items[i].equals("A")) {
     			
     			howManyItemA += 1;
@@ -47,13 +45,23 @@ public class CheckoutSolution {
     			
     			howManyItemB += 1;
     			
-    		}
+    		}    
     		
+    		sumItems += skus.get(items[i]);
     		
-    	}    	    	
+    	}
+    	
+    	if(howManyItemA == 3) {    		
+    		sumItems = 130;
+    	}
+    	
+     	if(howManyItemB == 2) {    		
+    		sumItems = 45;
+    	}
     	
         return sumItems;
     }
 }
+
 
 

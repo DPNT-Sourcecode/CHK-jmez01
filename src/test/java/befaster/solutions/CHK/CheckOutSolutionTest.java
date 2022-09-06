@@ -32,6 +32,16 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);		
 		
 	}
+	
+	@Test
+	public void testTotalItens_Discount() {
+		
+		Integer actual = checkOutSolution.checkout("B,B");
+		Integer expected = 130;
+		assertEquals(expected, actual);		
+		
+	}
 
 }
+
 
