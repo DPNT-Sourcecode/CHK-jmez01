@@ -13,33 +13,8 @@ public class CheckOutSolutionTest {
 	public void setUp() throws Exception {
 		
 		checkOutSolution = new CheckoutSolution();
-	}
-	
-//	id = CHK_R1_002, req = checkout(""), resp = -1 ok
-//			id = CHK_R1_003, req = checkout("A"), resp = 50 OK
-//			id = CHK_R1_004, req = checkout("B"), resp = 30 ok
-//			id = CHK_R1_005, req = checkout("C"), resp = 20 ok
-//			id = CHK_R1_006, req = checkout("D"), resp = 15 ok
-//			id = CHK_R1_007, req = checkout("a"), resp = -1 ok
-//			id = CHK_R1_008, req = checkout("-"), resp = -1
-//			id = CHK_R1_009, req = checkout("ABCa"), resp = -1
-//			id = CHK_R1_010, req = checkout("AxA"), resp = -1
-//			id = CHK_R1_011, req = checkout("ABCD"), resp = -1
-//			id = CHK_R1_012, req = checkout("A"), resp = 50
-//			id = CHK_R1_013, req = checkout("AA"), resp = -1
-//			id = CHK_R1_014, req = checkout("AAA"), resp = -1
-//			id = CHK_R1_015, req = checkout("AAAA"), resp = -1
-//			id = CHK_R1_016, req = checkout("AAAAA"), resp = -1
-//			id = CHK_R1_017, req = checkout("AAAAAA"), resp = -1
-//			id = CHK_R1_018, req = checkout("B"), resp = 30
-//			id = CHK_R1_019, req = checkout("BB"), resp = -1
-//			id = CHK_R1_020, req = checkout("BBB"), resp = -1
-//			id = CHK_R1_021, req = checkout("BBBB"), resp = -1
-//			id = CHK_R1_022, req = checkout("ABCDABCD"), resp = -1
-//			id = CHK_R1_023, req = checkout("BABDDCAC"), resp = -1
-//			id = CHK_R1_024, req = checkout("AAABB"), resp = -1
-//			id = CHK_R1_001, req = checkout("ABCDCBAABCABBAAA"), resp = -1
-//	
+	}	
+
 	@Test
 	public void testTotalItens_Ilegal() {
 		
@@ -93,6 +68,24 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);		
 		
 	}
+	
+	@Test
+	public void testTotalItens_Ilegal_hifen() {
+		
+		Integer actual = checkOutSolution.checkout("-");
+		Integer expected = -1;
+		assertEquals(expected, actual);		
+		
+	}
+	
+	@Test
+	public void testTotalItens_Ilegal_ABCa() {
+		
+		Integer actual = checkOutSolution.checkout("ABCa");
+		Integer expected = -1;
+		assertEquals(expected, actual);		
+		
+	}	
 
 	@Test
 	public void testTotalItens_NoDiscount_AB() {
@@ -161,6 +154,7 @@ public class CheckOutSolutionTest {
 
 
 }
+
 
 
 
