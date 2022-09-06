@@ -28,6 +28,7 @@ public class CheckoutSolution {
     public Integer checkout(String itemsTobeCheckout) {
     	
     	String items [] =  itemsTobeCheckout.split(",");
+    	Integer howManyItemA = 0;
     	
     	Integer sumItems = 0;
     	
@@ -35,8 +36,27 @@ public class CheckoutSolution {
     		
     		sumItems += skus.get(items[i]);
     		
+    		howManyItemA = checkDiscount(items, howManyItemA, i);
+    		
+    		
     	}    	    	
     	
         return sumItems;
     }
+
+	private Integer checkDiscount(String[] items, Integer howManyItemA, int i) {
+		if(items[i].equals("A")) {
+			
+			howManyItemA += 1;
+			
+		}    		
+		
+		if(items[i].equals("B")) {
+			
+			howManyItemA += 1;
+			
+		}
+		return howManyItemA;
+	}
 }
+
