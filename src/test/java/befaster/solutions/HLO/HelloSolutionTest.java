@@ -16,13 +16,23 @@ public class HelloSolutionTest {
 	}
 
 	@Test
-	public void test() {
+	public void testHelloSolution_HelloWord() {
 
 		String actual = helloSolution.hello("Igor");
 		String expected = "Hello, World!";
 		assertEquals(actual, expected);
 
 	}
+	
+	@Test
+	public void testHelloSolution_HelloFriend() {
+
+		String actual = helloSolution.hello("Igor");
+		String expected = "Hello, Igor!";
+		assertEquals(actual, expected);
+
+	}
 
 }
+
 
