@@ -7,17 +7,7 @@ public class CheckoutSolution {
 	
 	private static Map<String, Integer> skus = new HashMap<String, Integer>();	
 	
-	static {
-		
-	//	
-//		+------+-------+----------------+
-//		| Item | Price | Special offers |
-//		+------+-------+----------------+
-//		| A    | 50    | 3A for 130     |
-//		| B    | 30    | 2B for 45      |
-//		| C    | 20    |                |
-//		| D    | 15    |                |
-//		+------+-------+----------------+
+	static {	
 		
 		skus.put("A", 50);
 		skus.put("B", 30);
@@ -65,5 +55,6 @@ public class CheckoutSolution {
         return sumItemsA + sumItemsB + otherItems;
     }
 }
+
 
 

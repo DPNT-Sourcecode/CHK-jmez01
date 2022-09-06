@@ -16,7 +16,7 @@ public class CheckOutSolutionTest {
 	}
 
 	@Test
-	public void testTotalItens_NoDiscount() {
+	public void testTotalItens_NoDiscount_AB() {
 		
 		Integer actual = checkOutSolution.checkout("A,B");
 		Integer expected = 80;
@@ -89,5 +89,6 @@ public class CheckOutSolutionTest {
 
 
 }
+
 
 
