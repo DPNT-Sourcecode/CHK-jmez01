@@ -21,8 +21,8 @@ public class CheckoutSolution {
 		
 		skus.put("A", 50);
 		skus.put("B", 30);
-		skus.put("A", 20);
-		skus.put("A", 15);		
+		skus.put("C", 20);
+		skus.put("D", 15);		
 	}
 	
     public Integer checkout(String itemsTobeCheckout) {
@@ -40,8 +40,3 @@ public class CheckoutSolution {
         return sumItems;
     }
 }
-
-
-
-
-
