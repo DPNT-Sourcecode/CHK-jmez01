@@ -49,20 +49,19 @@ public class CheckoutSolution {
     			howManyItemB += 1;
     			sumItemsB += skus.get(items[i]);
     			
-    		}    
-    		
-    	
+    		}       		
     		
     	}
     	
     	if(howManyItemA == 3) {    		
-    		sumItems = 130;
+    		sumItemsA = 130;
     	}
     	
      	if(howManyItemB == 2) {    		
-    		sumItems = 45;
+    		sumItemsB = 45;
     	}
     	
-        return sumItems;
+        return sumItemsA + sumItemsB;
     }
 }
+
