@@ -5,6 +5,12 @@ import java.util.Map;
 
 public class CheckoutSolution {
 	
+	//TODO:Change this for a proper Enum
+	private static final int PRICE_DISCOUNT_B = 45;
+	private static final int PRICE_DISCOUNT_A = 130;
+	private static final int DISCOUNT_B_HOW_MANY = 2;
+	private static final int DISCOUNT_A_HOW_MANY = 3;
+	
 	private static Map<String, Integer> skus = new HashMap<String, Integer>();	
 	
 	static {	
@@ -23,8 +29,7 @@ public class CheckoutSolution {
     	
     	Integer sumItemsA = 0;
     	Integer sumItemsB = 0;
-    	Integer otherItems = 0;
-    	
+    	Integer otherItems = 0;    	
     	
     	for(int i = 0 ; i < items.length; i ++) {
     		
@@ -44,17 +49,18 @@ public class CheckoutSolution {
     		
     	}
     	
-    	if(howManyItemA == 3) {    		
-    		sumItemsA = 130;
+    	if(howManyItemA == DISCOUNT_A_HOW_MANY) {    		
+    		sumItemsA = PRICE_DISCOUNT_A;
     	}
     	
-     	if(howManyItemB == 2) {    		
-    		sumItemsB = 45;
+     	if(howManyItemB == DISCOUNT_B_HOW_MANY) {    		
+    		sumItemsB = PRICE_DISCOUNT_B;
     	}
     	
         return sumItemsA + sumItemsB + otherItems;
     }
 }
+
 
 
 
