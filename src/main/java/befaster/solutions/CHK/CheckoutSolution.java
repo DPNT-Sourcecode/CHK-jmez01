@@ -2,6 +2,7 @@ package befaster.solutions.CHK;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class CheckoutSolution {
 	
@@ -44,6 +45,9 @@ public class CheckoutSolution {
     			sumItemsB += skus.get(items[i]);
     			
     		} else {
+    			if(Objects.isNull(skus.get(items[i]))) {
+    				return -1;    				
+    			}
     			otherItems += skus.get(items[i]);
     		}
     		
@@ -60,3 +64,4 @@ public class CheckoutSolution {
         return sumItemsA + sumItemsB + otherItems;
     }
 }
+
