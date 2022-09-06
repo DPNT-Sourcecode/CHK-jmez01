@@ -16,11 +16,11 @@ public class CheckOutSolutionTest {
 	}
 	
 //	id = CHK_R1_002, req = checkout(""), resp = -1 ok
-//			id = CHK_R1_003, req = checkout("A"), resp = 50
-//			id = CHK_R1_004, req = checkout("B"), resp = 30
-//			id = CHK_R1_005, req = checkout("C"), resp = 20
-//			id = CHK_R1_006, req = checkout("D"), resp = 15
-//			id = CHK_R1_007, req = checkout("a"), resp = -1
+//			id = CHK_R1_003, req = checkout("A"), resp = 50 OK
+//			id = CHK_R1_004, req = checkout("B"), resp = 30 ok
+//			id = CHK_R1_005, req = checkout("C"), resp = 20 ok
+//			id = CHK_R1_006, req = checkout("D"), resp = 15 ok
+//			id = CHK_R1_007, req = checkout("a"), resp = -1 ok
 //			id = CHK_R1_008, req = checkout("-"), resp = -1
 //			id = CHK_R1_009, req = checkout("ABCa"), resp = -1
 //			id = CHK_R1_010, req = checkout("AxA"), resp = -1
@@ -57,6 +57,42 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);		
 		
 	}	
+	
+	@Test
+	public void testTotalItens_NoDiscount_B() {
+		
+		Integer actual = checkOutSolution.checkout("B");
+		Integer expected = 30;
+		assertEquals(expected, actual);		
+		
+	}			
+	
+	@Test
+	public void testTotalItens_NoDiscount_C() {
+		
+		Integer actual = checkOutSolution.checkout("C");
+		Integer expected = 20;
+		assertEquals(expected, actual);		
+		
+	}
+	
+	@Test
+	public void testTotalItens_NoDiscount_D() {
+		
+		Integer actual = checkOutSolution.checkout("D");
+		Integer expected = 15;
+		assertEquals(expected, actual);		
+		
+	}
+	
+	@Test
+	public void testTotalItens_Ilegal_a() {
+		
+		Integer actual = checkOutSolution.checkout("a");
+		Integer expected = -1;
+		assertEquals(expected, actual);		
+		
+	}
 
 	@Test
 	public void testTotalItens_NoDiscount_AB() {
@@ -67,14 +103,7 @@ public class CheckOutSolutionTest {
 		
 	}
 	
-	@Test
-	public void testTotalItens_NoDiscount_B() {
-		
-		Integer actual = checkOutSolution.checkout("B");
-		Integer expected = 30;
-		assertEquals(expected, actual);		
-		
-	}		
+
 	
 	@Test
 	public void testTotalItens_NoDiscount_All() {
@@ -132,5 +161,6 @@ public class CheckOutSolutionTest {
 
 
 }
+
 
 
