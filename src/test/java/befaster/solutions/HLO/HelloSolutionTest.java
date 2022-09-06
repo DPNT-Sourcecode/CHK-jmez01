@@ -14,15 +14,6 @@ public class HelloSolutionTest {
 
 		helloSolution = new HelloSolution();
 	}
-
-	@Test
-	public void testHelloSolution_HelloWord() {
-
-		String actual = helloSolution.hello("Igor");
-		String expected = "Hello, World!";
-		assertEquals(actual, expected);
-
-	}
 	
 	@Test
 	public void testHelloSolution_HelloFriend() {
@@ -34,5 +25,6 @@ public class HelloSolutionTest {
 	}
 
 }
+
 
 
