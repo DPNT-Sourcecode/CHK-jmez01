@@ -13,124 +13,7 @@ public class CheckOutSolutionTest {
 	public void setUp() throws Exception {
 		
 		checkOutSolution = new CheckoutSolution();
-	}	
-
-	@Test
-	public void testTotalItens_Ilegal() {
-		
-		Integer actual = checkOutSolution.checkout("");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
 	}
-	
-	@Test
-	public void testTotalItens_NoDiscount_A() {
-		
-		Integer actual = checkOutSolution.checkout("A");
-		Integer expected = 50;
-		assertEquals(expected, actual);		
-		
-	}	
-	
-	@Test
-	public void testTotalItens_NoDiscount_B() {
-		
-		Integer actual = checkOutSolution.checkout("B");
-		Integer expected = 30;
-		assertEquals(expected, actual);		
-		
-	}			
-	
-	@Test
-	public void testTotalItens_NoDiscount_C() {
-		
-		Integer actual = checkOutSolution.checkout("C");
-		Integer expected = 20;
-		assertEquals(expected, actual);		
-		
-	}
-	
-	@Test
-	public void testTotalItens_NoDiscount_D() {
-		
-		Integer actual = checkOutSolution.checkout("D");
-		Integer expected = 15;
-		assertEquals(expected, actual);		
-		
-	}
-	
-	@Test
-	public void testTotalItens_Ilegal_a() {
-		
-		Integer actual = checkOutSolution.checkout("a");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
-	}
-	
-	@Test
-	public void testTotalItens_Ilegal_hifen() {
-		
-		Integer actual = checkOutSolution.checkout("-");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
-	}
-	
-	@Test
-	public void testTotalItens_Ilegal_ABCa() {
-		
-		Integer actual = checkOutSolution.checkout("ABCa");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
-	}	
-	
-	@Test
-	public void testTotalItens_Ilegal_AxA() {
-		
-		Integer actual = checkOutSolution.checkout("AxA");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
-	}	
-	
-	@Test
-	public void testTotalItens_Ilegal_ABCD() {
-		
-		Integer actual = checkOutSolution.checkout("ABCD");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
-	}	
-	
-	@Test
-	public void testTotalItens_Ilegal_AA() {
-		
-		Integer actual = checkOutSolution.checkout("AA");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
-	}	
-	
-	@Test
-	public void testTotalItens_Ilegal_AAA() {
-		
-		Integer actual = checkOutSolution.checkout("AAA");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
-	}	
-	
-	@Test
-	public void testTotalItens_Ilegal_AAAA() {
-		
-		Integer actual = checkOutSolution.checkout("AAAA");
-		Integer expected = -1;
-		assertEquals(expected, actual);		
-		
-	}	
 
 	@Test
 	public void testTotalItens_NoDiscount_AB() {
@@ -141,7 +24,14 @@ public class CheckOutSolutionTest {
 		
 	}
 	
-
+	@Test
+	public void testTotalItens_NoDiscount_B() {
+		
+		Integer actual = checkOutSolution.checkout("B");
+		Integer expected = 30;
+		assertEquals(expected, actual);		
+		
+	}		
 	
 	@Test
 	public void testTotalItens_NoDiscount_All() {
@@ -199,9 +89,3 @@ public class CheckOutSolutionTest {
 
 
 }
-
-
-
-
-
-

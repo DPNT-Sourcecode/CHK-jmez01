@@ -24,7 +24,7 @@ public class CheckoutSolution {
 	
     public Integer checkout(String itemsTobeCheckout) {
     	
-    	String items [] =  itemsTobeCheckout.split(",");
+    	String items [] =  itemsTobeCheckout.split("");
     	Integer howManyItemA = 0;
     	Integer howManyItemB = 0;
     	
@@ -64,4 +64,3 @@ public class CheckoutSolution {
         return sumItemsA + sumItemsB + otherItems;
     }
 }
-
