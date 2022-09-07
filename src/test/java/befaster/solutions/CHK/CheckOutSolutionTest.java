@@ -127,7 +127,7 @@ public class CheckOutSolutionTest {
 	public void testTotalItens_DiscountA_DiscountB_AAAAAA() {
 		
 		Integer actual = checkOutSolution.checkout("AAAAAA");
-		Integer expected = 260;
+		Integer expected = 230;
 		assertEquals(expected, actual);				
 	}
 	
@@ -142,4 +142,5 @@ public class CheckOutSolutionTest {
 
 
 }
+
 

@@ -60,7 +60,7 @@ public class CheckoutSolution {
     	}
     	
     	if(howManyItemA > DISCOUNT_A_HOW_MANY && howManyItemA % DISCOUNT_A_HOW_MANY == 0 ) {    		
-    		sumItemsA = ((howManyItemA / DISCOUNT_A_HOW_MANY )* skus.get("A"));
+    		sumItemsA = ((howManyItemA / DISCOUNT_A_HOW_MANY )* PRICE_DISCOUNT_A);
     	}else if (howManyItemA >= DISCOUNT_A_HOW_MANY) {
     		sumItemsA = PRICE_DISCOUNT_A + ((howManyItemA - DISCOUNT_A_HOW_MANY )* skus.get("A"));
     	}
@@ -72,5 +72,6 @@ public class CheckoutSolution {
         return sumItemsA + sumItemsB + otherItems;
     }
 }
+
 
 
