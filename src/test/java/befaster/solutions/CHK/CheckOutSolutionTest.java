@@ -186,8 +186,7 @@ public class CheckOutSolutionTest {
 		Integer actual = checkOutSolution.checkout("EE");
 		Integer expected = 80;
 		assertEquals(expected, actual);				
-	}	
-	
+	}		
 	
 	@Test
 	public void testTotalItens_EEB() {
@@ -203,16 +202,8 @@ public class CheckOutSolutionTest {
 		Integer actual = checkOutSolution.checkout("EEEB");
 		Integer expected = 120;
 		assertEquals(expected, actual);				
-	}	
-	
-//	@Test
-//	public void testTotalItens_EEEEB() {
-//		
-//		Integer actual = checkOutSolution.checkout("EEEEB");
-//		Integer expected = 160;
-//		assertEquals(expected, actual);				
-//	}
-	
+	}		
+
 	@Test
 	public void testTotalItens_EEEEBB() {		
 		Integer actual = checkOutSolution.checkout("EEEEEEBBB");
@@ -220,6 +211,22 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);				
 	}
 	
+
+	@Test
+	public void testTotalItens_ABCDEABCDE() {		
+		Integer actual = checkOutSolution.checkout("ABCDEABCDE");
+		Integer expected = 240;
+		assertEquals(expected, actual);				
+	}
+	
+	
+	
+	/*id = CHK_R2_038, req = checkout("ABCDEABCDE"), resp = 280
+			id = CHK_R2_039, req = checkout("CCADDEEBBA"), resp = 280
+			id = CHK_R2_040, req = checkout("AAAAAEEBAAABB"), resp = 485
+			id = CHK_R2_001, req = checkout("ABCDECBAABCABBAAAEEAA"), resp = 675*/
+	
 }
+
 
 
