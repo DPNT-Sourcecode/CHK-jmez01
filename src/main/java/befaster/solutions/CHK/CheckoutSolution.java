@@ -12,7 +12,8 @@ public class CheckoutSolution {
 	private static final int PRICE_DISCOUNT_B = 45;
 	private static final int PRICE_DISCOUNT_A = 130;
 	private static final int DISCOUNT_B_HOW_MANY = 2;
-	private static final int DISCOUNT_A_HOW_MANY = 3;
+	private static final int DISCOUNT_A_3 = 3;
+	private static final int DISCOUNT_A_5 = 5;
 	
 	private static Map<String, Integer> skus = new HashMap<String, Integer>();	
 	
@@ -107,13 +108,14 @@ public class CheckoutSolution {
 	}
 
 	private Integer checkSumItemsA(Integer howManyItemA, Integer sumItemsA) {
-		if(howManyItemA >= DISCOUNT_A_HOW_MANY && howManyItemA % DISCOUNT_A_HOW_MANY == 0 ) {    		
-    		sumItemsA = ((howManyItemA / DISCOUNT_A_HOW_MANY )* PRICE_DISCOUNT_A);
-    	}else if (howManyItemA % DISCOUNT_A_HOW_MANY != 0) {//When the number of items are not squared ex: AAAAAAA and there is discount
-    		int rest = howManyItemA % DISCOUNT_A_HOW_MANY;
-    		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_HOW_MANY) * PRICE_DISCOUNT_A;
+		if(howManyItemA >= DISCOUNT_A_3 && howManyItemA % DISCOUNT_A_3 == 0 ) {    		
+    		sumItemsA = ((howManyItemA / DISCOUNT_A_3 )* PRICE_DISCOUNT_A);
+    	}else if (howManyItemA % DISCOUNT_A_3 != 0) {//When the number of items are not squared ex: AAAAAAA and there is discount
+    		int rest = howManyItemA % DISCOUNT_A_3;
+    		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_3) * PRICE_DISCOUNT_A;
     	}
 		return sumItemsA;
 	}
 }
+
 
