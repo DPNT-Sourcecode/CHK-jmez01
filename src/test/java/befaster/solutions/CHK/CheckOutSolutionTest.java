@@ -244,11 +244,9 @@ public class CheckOutSolutionTest {
 	@Test
 	public void testTotalItens_ABCDECBAABCABBAAAEEAA() {		
 		Integer actual = checkOutSolution.checkout("ABCDECBAABCABBAAAEEAA");
-		Integer expected = 655;
+		Integer expected = 665;
 		assertEquals(expected, actual);				
 	}
 	
 		
 }
-
-
