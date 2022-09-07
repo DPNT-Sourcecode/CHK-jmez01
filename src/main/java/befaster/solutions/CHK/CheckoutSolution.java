@@ -72,7 +72,7 @@ public class CheckoutSolution {
     	
     	sumItemsA = checkSumItemsA(howManyItemA, sumItemsA);    	   	
     	   	
-    	sumItemsB = checkSumItemsB(howManyItemB, sumItemsB, sumItemsE);
+    	sumItemsB = checkSumItemsB(howManyItemB, sumItemsB, howManyItemE);
     	
         return sumItemsA + sumItemsB + sumItemsE + otherItems;
     }
@@ -115,3 +115,4 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
