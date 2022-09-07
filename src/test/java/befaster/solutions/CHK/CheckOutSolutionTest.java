@@ -188,4 +188,13 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);				
 	}	
 	
+	@Test
+	public void testTotalItens_EEEB() {
+		
+		Integer actual = checkOutSolution.checkout("EEEB");
+		Integer expected = 80;
+		assertEquals(expected, actual);				
+	}	
+	
 }
+
