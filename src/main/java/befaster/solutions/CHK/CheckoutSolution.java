@@ -47,11 +47,11 @@ public class CheckoutSolution {
     			sumItemsB += skus.get(items[i]);
     			
     		} else {
+    			
     			if(items[i].equals("")) {
     				return 0;
-    			}else if Objects.isNull(skus.get(items[i])) {
-    				return -1; 
-    			
+    			}else if (Objects.isNull(skus.get(items[i]))) {
+    				return -1;     			
     			}
     			
     			otherItems += skus.get(items[i]);
@@ -70,5 +70,6 @@ public class CheckoutSolution {
         return sumItemsA + sumItemsB + otherItems;
     }
 }
+
 
 
