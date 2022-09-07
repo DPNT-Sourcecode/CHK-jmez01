@@ -240,6 +240,15 @@ public class CheckOutSolutionTest {
 		Integer expected = 455;
 		assertEquals(expected, actual);				
 	}
+	
+	@Test
+	public void testTotalItens_ABCDECBAABCABBAAAEEAA() {		
+		Integer actual = checkOutSolution.checkout("ABCDECBAABCABBAAAEEAA");
+		Integer expected = 655;
+		assertEquals(expected, actual);				
+	}
+	
 		
 }
+
 

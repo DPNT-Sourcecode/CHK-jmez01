@@ -105,6 +105,7 @@ public class CheckoutSolution {
 		return sumItemsB;
 	}
 
+	//TODO: Refactor this code 
 	private Integer checkSumItemsA(Integer howManyItemA, Integer sumItemsA) {
 		
 		if(howManyItemA < DISCOUNT_A_5 && howManyItemA >= DISCOUNT_A_3 && howManyItemA % DISCOUNT_A_3 == 0 ) {    		
@@ -119,8 +120,8 @@ public class CheckoutSolution {
     		int rest = howManyItemA % DISCOUNT_A_5;      		
     		
     		if(rest < DISCOUNT_A_3) {    			
-    			sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_5) * PRICE_DISCOUNT_A_5;
-    		}else if (rest >= DISCOUNT_A_3) {    			
+    			sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_5) * PRICE_DISCOUNT_A_5; //when we apply the discount on the first five items + items < 3, ex:AAAAAAA
+    		}else if (rest >= DISCOUNT_A_3) {  //when we apply the discount on the first five items + items > 3, ex:AAAAAAAAA  			
     			sumItemsA = ((rest / DISCOUNT_A_3 )* PRICE_DISCOUNT_A_3) + (rest % DISCOUNT_A_3) * skus.get("A")  + ((howManyItemA - rest) /DISCOUNT_A_5) * PRICE_DISCOUNT_A_5;
     		}
     		
@@ -129,6 +130,7 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
 
 
 
