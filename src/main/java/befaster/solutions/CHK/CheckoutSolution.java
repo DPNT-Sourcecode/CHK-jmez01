@@ -84,6 +84,7 @@ public class CheckoutSolution {
 		 if(howManyItemE > 2) {
 			 
 			 howManyItemB -= 1;
+			 sumItemsB -= skus.get("B");
 			 
 		 }		
 		
@@ -107,3 +108,4 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
