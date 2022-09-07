@@ -34,7 +34,7 @@ public class CheckOutSolutionTest {
 	}
 
 	@Test
-	public void testTotalItens_NoDiscount_AB() {
+	public void testTotalItens_AB() {
 		
 		Integer actual = checkOutSolution.checkout("AB");
 		Integer expected = 80;
@@ -43,7 +43,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_NoDiscount_B() {
+	public void testTotalItens_B() {
 		
 		Integer actual = checkOutSolution.checkout("B");
 		Integer expected = 30;
@@ -52,7 +52,7 @@ public class CheckOutSolutionTest {
 	}		
 	
 	@Test
-	public void testTotalItens_NoDiscount_All() {
+	public void testTotalItens_ABCD() {
 		
 		Integer actual = checkOutSolution.checkout("ABCD");
 		Integer expected = 115;
@@ -61,7 +61,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA() {
+	public void testTotalItens_AAA() {
 		
 		Integer actual = checkOutSolution.checkout("AAA");
 		Integer expected = 130;
@@ -158,7 +158,7 @@ public class CheckOutSolutionTest {
 	@Test
 	public void testTotalItens_ABCDCBAABCABBAAA() {
 		
-		Integer actual = checkOutSolution.checkout("ABCDABCD");
+		Integer actual = checkOutSolution.checkout("ABCDCBAABCABBAAA");
 		Integer expected = 505;
 		assertEquals(expected, actual);				
 	}	
@@ -166,5 +166,6 @@ public class CheckOutSolutionTest {
 
 
 }
+
 
 
