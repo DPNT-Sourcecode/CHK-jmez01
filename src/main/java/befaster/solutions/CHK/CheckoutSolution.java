@@ -68,6 +68,8 @@ public class CheckoutSolution {
         return sumItemsA + sumItemsB + otherItems;
     }
 
+    
+    //TODO: Refactor these two methods
 	private Integer checkSumItemsB(Integer howManyItemB, Integer sumItemsB) {
 		if(howManyItemB > DISCOUNT_B_HOW_MANY && howManyItemB % DISCOUNT_B_HOW_MANY == 0) {
     		sumItemsB = ((howManyItemB / DISCOUNT_B_HOW_MANY )* PRICE_DISCOUNT_B);
@@ -87,3 +89,4 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
