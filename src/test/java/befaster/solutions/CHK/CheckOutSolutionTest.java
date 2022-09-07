@@ -192,9 +192,10 @@ public class CheckOutSolutionTest {
 	public void testTotalItens_EEEB() {
 		
 		Integer actual = checkOutSolution.checkout("EEEB");
-		Integer expected = 80;
+		Integer expected = 120;
 		assertEquals(expected, actual);				
 	}	
 	
 }
+
 
