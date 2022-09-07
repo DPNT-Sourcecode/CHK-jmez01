@@ -23,6 +23,15 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);		
 		
 	}
+	
+	@Test
+	public void testTotalItens_Empty_String() {
+		
+		Integer actual = checkOutSolution.checkout("");
+		Integer expected = 0;
+		assertEquals(expected, actual);		
+		
+	}
 
 	@Test
 	public void testTotalItens_NoDiscount_AB() {
@@ -98,5 +107,6 @@ public class CheckOutSolutionTest {
 
 
 }
+
 
 
