@@ -81,12 +81,20 @@ public class CheckoutSolution {
     //TODO: Refactor these two methods
 	private Integer checkSumItemsB(Integer howManyItemB, Integer sumItemsB,  Integer howManyItemE) {
 		
-		if(howManyItemE > 2 && howManyItemB > 0) {
+		if(howManyItemE == 2 && howManyItemB > 0) {
 			 
 			 howManyItemB -= 1;
 			 sumItemsB -= skus.get("B");
 			 
-		}		
+		}
+		
+		if(howManyItemE > 0 && howManyItemE % 2 == 0 && howManyItemB > 0) {
+			 
+			 howManyItemB -= 1;
+			 sumItemsB -= (howManyItemE /2) * skus.get("B");
+			 
+		}	
+		
 		
 		if(howManyItemB >= DISCOUNT_B_HOW_MANY && howManyItemB % DISCOUNT_B_HOW_MANY == 0) {
     		sumItemsB = ((howManyItemB / DISCOUNT_B_HOW_MANY )* PRICE_DISCOUNT_B);
@@ -108,6 +116,7 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
 
 
 
