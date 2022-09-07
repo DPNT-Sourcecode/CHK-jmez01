@@ -115,12 +115,12 @@ public class CheckoutSolution {
     	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 == 0) {
     		sumItemsA = ((howManyItemA / DISCOUNT_A_5 )* PRICE_DISCOUNT_A_5);
     	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 !=0) {
-    		int rest = howManyItemA % DISCOUNT_A_5;    
+    		int rest = howManyItemA % DISCOUNT_A_5;   
     		
     		if(rest < DISCOUNT_A_3) {    			
     			sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_5) * PRICE_DISCOUNT_A_5;
-    		}else if (rest == DISCOUNT_A_3) {
-    			sumItemsA = ((howManyItemA / DISCOUNT_A_3 )* PRICE_DISCOUNT_A_3);
+    		}else if (rest == DISCOUNT_A_3) {    			
+    			sumItemsA = ((rest / DISCOUNT_A_3 )* PRICE_DISCOUNT_A_3) + ((howManyItemA - rest) /DISCOUNT_A_5) * PRICE_DISCOUNT_A_5;
     		}
     		
     	}
@@ -128,3 +128,4 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
