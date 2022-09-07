@@ -1,5 +1,6 @@
 package befaster.solutions.CHK;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -25,6 +26,9 @@ public class CheckoutSolution {
     public Integer checkout(String itemsTobeCheckout) {
     	
     	String items [] =  itemsTobeCheckout.split("");
+    	
+    	Arrays.sort(items);
+    	
     	Integer howManyItemA = 0;
     	Integer howManyItemB = 0;
     	
@@ -83,11 +87,3 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
-
-
-
-
-
-
-
-

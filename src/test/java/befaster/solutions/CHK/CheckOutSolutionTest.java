@@ -165,10 +165,3 @@ id = CHK_R1_001, req = checkout("ABCDCBAABCABBAAA"), resp = 575
 
 
 }
-
-
-
-
-
-
-
