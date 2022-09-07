@@ -212,6 +212,3 @@ public class CheckOutSolutionTest {
 	}
 	
 }
-
-
-
