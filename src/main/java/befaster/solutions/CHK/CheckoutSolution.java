@@ -65,13 +65,17 @@ public class CheckoutSolution {
     		sumItemsA = PRICE_DISCOUNT_A + ((howManyItemA - DISCOUNT_A_HOW_MANY )* skus.get("A"));
     	}
     	
-     	if(howManyItemB == DISCOUNT_B_HOW_MANY) {    		
+    	if(howManyItemB > DISCOUNT_B_HOW_MANY && howManyItemB % DISCOUNT_A_HOW_MANY == 0) {
+    		
+    	}    	
+    	else if(howManyItemB == DISCOUNT_B_HOW_MANY) {    		
     		sumItemsB = PRICE_DISCOUNT_B + ((howManyItemB - DISCOUNT_B_HOW_MANY )* skus.get("B"));
     	}
     	
         return sumItemsA + sumItemsB + otherItems;
     }
 }
+
 
 
 
