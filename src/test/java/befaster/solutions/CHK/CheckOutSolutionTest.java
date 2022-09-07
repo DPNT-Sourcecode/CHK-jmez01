@@ -145,19 +145,19 @@ public class CheckOutSolutionTest {
 		Integer actual = checkOutSolution.checkout("BBBB");
 		Integer expected = 90;
 		assertEquals(expected, actual);				
-	}
-		
+	}		
 	
 	/*
-	 - {"method":"checkout","params":["AAAAAA"],"id":"CHK_R1_017"}, expected: 260, got: 280
-	 - {"method":"checkout","params":["BBB"],"id":"CHK_R1_020"}, expected: 75, got: 90
-	 - {"method":"checkout","params":["BBBB"],"id":"CHK_R1_021"}, expected: 90, got: 120*/
-	
-	
-	
+	 * id = CHK_R1_022, req = checkout("ABCDABCD"), resp = 215
+id = CHK_R1_023, req = checkout("BABDDCAC"), resp = 215
+id = CHK_R1_024, req = checkout("AAABB"), resp = 175
+id = CHK_R1_001, req = checkout("ABCDCBAABCABBAAA"), resp = 575
+	 * *
+	 */
 
 
 }
+
 
 
 
