@@ -156,6 +156,15 @@ public class CheckOutSolutionTest {
 	}	
 	
 	@Test
+	public void testTotalItens_AAAAAAA() {
+		
+		Integer actual = checkOutSolution.checkout("AAAAAAA");
+		Integer expected = 300;
+		assertEquals(expected, actual);				
+	}	
+	
+	
+	@Test
 	public void testTotalItens_ABCDCBAABCABBAAA() {
 		
 		Integer actual = checkOutSolution.checkout("ABCDCBAABCABBAAA");
@@ -212,3 +221,4 @@ public class CheckOutSolutionTest {
 	}
 	
 }
+
