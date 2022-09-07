@@ -79,9 +79,9 @@ public class CheckoutSolution {
 
     
     //TODO: Refactor these two methods
-	private Integer checkSumItemsB(Integer howManyItemB, Integer sumItemsB,  Integer sumItemsE) {
+	private Integer checkSumItemsB(Integer howManyItemB, Integer sumItemsB,  Integer howManyItemE) {
 		
-		 if(sumItemsE > 2) {
+		 if(howManyItemE > 2) {
 			 
 			 howManyItemB -= 1;
 			 
@@ -107,6 +107,3 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
-
-
-
