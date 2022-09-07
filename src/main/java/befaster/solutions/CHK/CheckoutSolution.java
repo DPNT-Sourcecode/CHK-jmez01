@@ -32,9 +32,11 @@ public class CheckoutSolution {
     	
     	Integer howManyItemA = 0;
     	Integer howManyItemB = 0;
+    	Integer howManyItemE = 0;    	
     	
     	Integer sumItemsA = 0;
     	Integer sumItemsB = 0;
+      	Integer sumItemsE = 0;
     	Integer otherItems = 0;    	
     	
     	for(int i = 0 ; i < items.length; i ++) {
@@ -49,7 +51,13 @@ public class CheckoutSolution {
     			howManyItemB += 1;
     			sumItemsB += skus.get(items[i]);
     			
-    		} else {
+    		}
+    		else if(items[i].equals("E")) {
+    			
+    			howManyItemE += 1;
+    			sumItemsE += skus.get(items[i]);    			
+    		}
+    		else {
     			
     			if(items[i].equals("")) {
     				return 0;
@@ -92,4 +100,5 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
 
