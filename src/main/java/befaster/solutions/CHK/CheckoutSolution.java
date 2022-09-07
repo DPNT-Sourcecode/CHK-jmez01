@@ -74,8 +74,9 @@ public class CheckoutSolution {
 		if(howManyItemB > DISCOUNT_B_HOW_MANY && howManyItemB % DISCOUNT_B_HOW_MANY == 0) {
     		sumItemsB = ((howManyItemB / DISCOUNT_B_HOW_MANY )* PRICE_DISCOUNT_B);
     	}    	
-    	else if(howManyItemB >= DISCOUNT_B_HOW_MANY) {    		
-    		sumItemsB = PRICE_DISCOUNT_B + ((howManyItemB - DISCOUNT_B_HOW_MANY )* skus.get("B"));
+    	else if(howManyItemB % DISCOUNT_B_HOW_MANY != 0) {    
+    		int rest = howManyItemA % DISCOUNT_A_HOW_MANY;
+    		sumItemsB = (rest * skus.get("B"))  + ((howManyItemB - rest) /DISCOUNT_B_HOW_MANY) * PRICE_DISCOUNT_B;
     	}
 		return sumItemsB;
 	}
@@ -85,10 +86,11 @@ public class CheckoutSolution {
     		sumItemsA = ((howManyItemA / DISCOUNT_A_HOW_MANY )* PRICE_DISCOUNT_A);
     	}else if (howManyItemA % DISCOUNT_A_HOW_MANY != 0) {
     		int rest = howManyItemA % DISCOUNT_A_HOW_MANY;
-    		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_HOW_MANY) * skus.get("A");
+    		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_HOW_MANY) * PRICE_DISCOUNT_A;
     	}
 		return sumItemsA;
 	}
 }
+
 
 
