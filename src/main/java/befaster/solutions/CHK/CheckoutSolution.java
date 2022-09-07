@@ -110,10 +110,13 @@ public class CheckoutSolution {
 	private Integer checkSumItemsA(Integer howManyItemA, Integer sumItemsA) {
 		if(howManyItemA >= DISCOUNT_A_3 && howManyItemA % DISCOUNT_A_3 == 0 ) {    		
     		sumItemsA = ((howManyItemA / DISCOUNT_A_3 )* PRICE_DISCOUNT_A);
-    	}else if (howManyItemA % DISCOUNT_A_3 != 0) {//When the number of items are not squared ex: AAAAAAA and there is discount
+    	}else if (howManyItemA < DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_3 != 0) {//When the number of items are not squared ex: AAAAAAA and there is discount
     		int rest = howManyItemA % DISCOUNT_A_3;
     		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_3) * PRICE_DISCOUNT_A;
+    	}else if(howManyItemA > DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_3 != 0) {
+    		
     	}
 		return sumItemsA;
 	}
 }
+
