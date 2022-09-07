@@ -114,8 +114,9 @@ public class CheckoutSolution {
     		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_3) * PRICE_DISCOUNT_A_3;
     	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 == 0) {
     		sumItemsA = ((howManyItemA / DISCOUNT_A_5 )* PRICE_DISCOUNT_A_5);
-    	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 !=0) {
-    		int rest = howManyItemA % DISCOUNT_A_5;   
+    	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 !=0) {//When the number of items are not squared ex: AAAAAAAA and there is discount
+    		
+    		int rest = howManyItemA % DISCOUNT_A_5;      		
     		
     		if(rest < DISCOUNT_A_3) {    			
     			sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_5) * PRICE_DISCOUNT_A_5;
@@ -128,6 +129,7 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
 
 
 
