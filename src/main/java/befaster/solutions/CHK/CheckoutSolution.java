@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+import org.apache.commons.codec.binary.StringUtils;
+
 public class CheckoutSolution {
 	
 	//TODO:Change this for a proper Enum
@@ -44,7 +46,7 @@ public class CheckoutSolution {
     			howManyItemB += 1;
     			sumItemsB += skus.get(items[i]);
     			
-    		} else {
+    		} else {    	    			
     			if(Objects.isNull(skus.get(items[i]))) {
     				return -1;    				
     			}
@@ -64,3 +66,4 @@ public class CheckoutSolution {
         return sumItemsA + sumItemsB + otherItems;
     }
 }
+
