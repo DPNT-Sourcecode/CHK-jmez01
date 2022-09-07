@@ -70,16 +70,23 @@ public class CheckoutSolution {
     		
     	}
     	
-    	sumItemsA = checkSumItemsA(howManyItemA, sumItemsA);
+    	sumItemsA = checkSumItemsA(howManyItemA, sumItemsA);    	   	
+    	   	
+    	sumItemsB = checkSumItemsB(howManyItemB, sumItemsB, sumItemsE);
     	
-    	sumItemsB = checkSumItemsB(howManyItemB, sumItemsB);
-    	
-        return sumItemsA + sumItemsB + otherItems;
+        return sumItemsA + sumItemsB + sumItemsE + otherItems;
     }
 
     
     //TODO: Refactor these two methods
-	private Integer checkSumItemsB(Integer howManyItemB, Integer sumItemsB) {
+	private Integer checkSumItemsB(Integer howManyItemB, Integer sumItemsB,  Integer sumItemsE) {
+		
+		 if(sumItemsE > 2) {
+			 
+			 howManyItemB -= 1;
+			 
+		 }		
+		
 		if(howManyItemB >= DISCOUNT_B_HOW_MANY && howManyItemB % DISCOUNT_B_HOW_MANY == 0) {
     		sumItemsB = ((howManyItemB / DISCOUNT_B_HOW_MANY )* PRICE_DISCOUNT_B);
     	}    	
@@ -100,5 +107,6 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
 
 
