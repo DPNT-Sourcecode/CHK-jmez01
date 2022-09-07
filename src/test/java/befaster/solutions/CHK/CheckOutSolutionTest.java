@@ -124,7 +124,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA_DiscountB_AAAAAA() {
+	public void testTotalItens_DiscountA_DiscountA_AAAAAA() {
 		
 		Integer actual = checkOutSolution.checkout("AAAAAA");
 		Integer expected = 260;
@@ -147,6 +147,14 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);				
 	}		
 	
+	@Test
+	public void testTotalItens_DiscountA_DiscountB_ABCDABCD() {
+		
+		Integer actual = checkOutSolution.checkout("ABCDABCD");
+		Integer expected = 90;
+		assertEquals(expected, actual);				
+	}	
+	
 	/*
 	 * id = CHK_R1_022, req = checkout("ABCDABCD"), resp = 215
 id = CHK_R1_023, req = checkout("BABDDCAC"), resp = 215
@@ -157,6 +165,7 @@ id = CHK_R1_001, req = checkout("ABCDCBAABCABBAAA"), resp = 575
 
 
 }
+
 
 
 

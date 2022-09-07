@@ -4,8 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-import org.apache.commons.codec.binary.StringUtils;
-
 public class CheckoutSolution {
 	
 	//TODO:Change this for a proper Enum
@@ -85,6 +83,7 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
 
 
 
