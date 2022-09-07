@@ -206,9 +206,10 @@ public class CheckOutSolutionTest {
 	
 	@Test
 	public void testTotalItens_EEEEBB() {		
-		Integer actual = checkOutSolution.checkout("EEEEBB");
-		Integer expected = 160;
+		Integer actual = checkOutSolution.checkout("EEEEEEBBB");
+		Integer expected = 240;
 		assertEquals(expected, actual);				
 	}
 	
 }
+
