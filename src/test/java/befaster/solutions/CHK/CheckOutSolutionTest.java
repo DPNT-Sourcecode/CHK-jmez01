@@ -18,7 +18,7 @@ public class CheckOutSolutionTest {
 	@Test
 	public void testTotalItens_Ilegal() {
 		
-		Integer actual = checkOutSolution.checkout("E");
+		Integer actual = checkOutSolution.checkout("a");
 		Integer expected = -1;
 		assertEquals(expected, actual);		
 		
@@ -164,3 +164,4 @@ public class CheckOutSolutionTest {
 	}	
 	
 }
+
