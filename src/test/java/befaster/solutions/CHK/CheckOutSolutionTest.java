@@ -163,9 +163,4 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);				
 	}	
 	
-
-
 }
-
-
-
