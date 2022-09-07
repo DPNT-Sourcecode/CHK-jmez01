@@ -132,10 +132,10 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA_DiscountB_BBBBBB() {
+	public void testTotalItens_DiscountA_DiscountB_BBB() {
 		
-		Integer actual = checkOutSolution.checkout("BBBBBB");
-		Integer expected = 260;
+		Integer actual = checkOutSolution.checkout("BBB");
+		Integer expected = 75;
 		assertEquals(expected, actual);				
 	}
 	
@@ -150,6 +150,7 @@ public class CheckOutSolutionTest {
 
 
 }
+
 
 
 
