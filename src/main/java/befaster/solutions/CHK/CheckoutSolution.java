@@ -84,18 +84,14 @@ public class CheckoutSolution {
 
 	private Integer checkSumItemsB(Integer howManyItemB, Integer sumItemsB,  Integer howManyItemE) {
 		
-		if(howManyItemE == HOW_MANY_E_TO_TAKE_B && howManyItemB > 0) {
-			 
+		if(howManyItemE == HOW_MANY_E_TO_TAKE_B && howManyItemB > 0) {			 
 			 howManyItemB -= 1;
-			 sumItemsB -= skus.get("B");
-			 
+			 sumItemsB -= skus.get("B");			 
 		}
 		
-		if(howManyItemE > HOW_MANY_E_TO_TAKE_B && howManyItemB > 0) {
-			 
+		if(howManyItemE > HOW_MANY_E_TO_TAKE_B && howManyItemB > 0) {			 
 			 howManyItemB -= (howManyItemE /HOW_MANY_E_TO_TAKE_B);
-			 sumItemsB -= (howManyItemE /HOW_MANY_E_TO_TAKE_B) * skus.get("B");
-			 
+			 sumItemsB -= (howManyItemE /HOW_MANY_E_TO_TAKE_B) * skus.get("B");			 
 		}				
 		
 		if(howManyItemB >= DISCOUNT_B_HOW_MANY && howManyItemB % DISCOUNT_B_HOW_MANY == 0) {
@@ -105,10 +101,12 @@ public class CheckoutSolution {
     		int rest = howManyItemB % DISCOUNT_B_HOW_MANY;
     		sumItemsB = (rest * skus.get("B"))  + ((howManyItemB - rest) /DISCOUNT_B_HOW_MANY) * PRICE_DISCOUNT_B;
     	}
+		
 		return sumItemsB;
 	}
 
 	private Integer checkSumItemsA(Integer howManyItemA, Integer sumItemsA) {
+		
 		if(howManyItemA >= DISCOUNT_A_3 && howManyItemA % DISCOUNT_A_3 == 0 ) {    		
     		sumItemsA = ((howManyItemA / DISCOUNT_A_3 )* PRICE_DISCOUNT_A_3);
     	}else if (howManyItemA < DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_3 != 0) {//When the number of items are not squared ex: AAAA and there is discount
@@ -116,12 +114,15 @@ public class CheckoutSolution {
     		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_3) * PRICE_DISCOUNT_A_3;
     	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 == 0) {
     		sumItemsA = ((howManyItemA / DISCOUNT_A_5 )* PRICE_DISCOUNT_A_5);
-    	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 == 0) {
-    		
+    	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 !=0) {
+    		int rest = howManyItemA % DISCOUNT_A_5;
+    		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_5) * PRICE_DISCOUNT_A_5;
     	}
+		
 		return sumItemsA;
 	}
 }
+
 
 
 
