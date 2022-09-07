@@ -139,6 +139,14 @@ public class CheckOutSolutionTest {
 		assertEquals(expected, actual);				
 	}
 	
+	@Test
+	public void testTotalItens_DiscountA_DiscountB_BBBB() {
+		
+		Integer actual = checkOutSolution.checkout("BBBB");
+		Integer expected = 90;
+		assertEquals(expected, actual);				
+	}
+		
 	
 	/*
 	 - {"method":"checkout","params":["AAAAAA"],"id":"CHK_R1_017"}, expected: 260, got: 280
@@ -150,6 +158,7 @@ public class CheckOutSolutionTest {
 
 
 }
+
 
 
 
