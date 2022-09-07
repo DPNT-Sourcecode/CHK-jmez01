@@ -7,6 +7,7 @@ import java.util.Objects;
 
 public class CheckoutSolution {
 	
+	private static final int HOW_MANY_E_TO_TAKE_B = 2;
 	//TODO:Change this for a proper Enum
 	private static final int PRICE_DISCOUNT_B = 45;
 	private static final int PRICE_DISCOUNT_A = 130;
@@ -78,20 +79,20 @@ public class CheckoutSolution {
     }
 
     
-    //TODO: Refactor these two methods
+
 	private Integer checkSumItemsB(Integer howManyItemB, Integer sumItemsB,  Integer howManyItemE) {
 		
-		if(howManyItemE == 2 && howManyItemB > 0) {
+		if(howManyItemE == HOW_MANY_E_TO_TAKE_B && howManyItemB > 0) {
 			 
 			 howManyItemB -= 1;
 			 sumItemsB -= skus.get("B");
 			 
 		}
 		
-		if(howManyItemE > 2 && howManyItemB > 0) {
+		if(howManyItemE > HOW_MANY_E_TO_TAKE_B && howManyItemB > 0) {
 			 
-			 howManyItemB -= (howManyItemE /2);
-			 sumItemsB -= (howManyItemE /2) * skus.get("B");
+			 howManyItemB -= (howManyItemE /HOW_MANY_E_TO_TAKE_B);
+			 sumItemsB -= (howManyItemE /HOW_MANY_E_TO_TAKE_B) * skus.get("B");
 			 
 		}				
 		
@@ -115,3 +116,4 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
