@@ -88,19 +88,12 @@ public class CheckoutSolution {
 			 
 		}
 		
-		if(howManyItemE > 2 && howManyItemE % 2 == 0 && howManyItemB > 0) {
+		if(howManyItemE > 2 && howManyItemB > 0) {
 			 
 			 howManyItemB -= (howManyItemE /2);
 			 sumItemsB -= (howManyItemE /2) * skus.get("B");
 			 
-		}		
-		
-		if(howManyItemE > 2 && howManyItemE % 2 != 0 && howManyItemB > 0) {
-			 
-			 howManyItemB -= (howManyItemE /2);
-			 sumItemsB -= (howManyItemE /2) * skus.get("B");
-			 
-		}		
+		}				
 		
 		if(howManyItemB >= DISCOUNT_B_HOW_MANY && howManyItemB % DISCOUNT_B_HOW_MANY == 0) {
     		sumItemsB = ((howManyItemB / DISCOUNT_B_HOW_MANY )* PRICE_DISCOUNT_B);
@@ -122,7 +115,3 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
-
-
-
-
