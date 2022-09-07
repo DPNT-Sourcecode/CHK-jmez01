@@ -118,6 +118,8 @@ public class CheckoutSolution {
     		int rest = howManyItemA % DISCOUNT_A_5;    
     		if(rest < DISCOUNT_A_3) {    			
     			sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_5) * PRICE_DISCOUNT_A_5;
+    		}else if (rest == DISCOUNT_A_3) {
+    			sumItemsA = ((howManyItemA / DISCOUNT_A_3 )* PRICE_DISCOUNT_A_3);
     		}
     		
     	}
@@ -125,6 +127,7 @@ public class CheckoutSolution {
 		return sumItemsA;
 	}
 }
+
 
 
 
