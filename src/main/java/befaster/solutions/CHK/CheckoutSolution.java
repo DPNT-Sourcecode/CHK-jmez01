@@ -11,7 +11,7 @@ public class CheckoutSolution {
 	//TODO:Change this for a proper Enum
 	private static final int PRICE_DISCOUNT_B = 45;
 	private static final int PRICE_DISCOUNT_A_3 = 130;
-	private static final int PRICE_DISCOUNT_A_5 = 130;
+	private static final int PRICE_DISCOUNT_A_5 = 200;
 	private static final int DISCOUNT_B_HOW_MANY = 2;
 	private static final int DISCOUNT_A_3 = 3;
 	private static final int DISCOUNT_A_5 = 5;
@@ -111,15 +111,18 @@ public class CheckoutSolution {
 	private Integer checkSumItemsA(Integer howManyItemA, Integer sumItemsA) {
 		if(howManyItemA >= DISCOUNT_A_3 && howManyItemA % DISCOUNT_A_3 == 0 ) {    		
     		sumItemsA = ((howManyItemA / DISCOUNT_A_3 )* PRICE_DISCOUNT_A_3);
-    	}else if (howManyItemA < DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_3 != 0) {//When the number of items are not squared ex: AAAAAAA and there is discount
+    	}else if (howManyItemA < DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_3 != 0) {//When the number of items are not squared ex: AAAA and there is discount
     		int rest = howManyItemA % DISCOUNT_A_3;
     		sumItemsA = (rest * skus.get("A"))  + ((howManyItemA - rest) /DISCOUNT_A_3) * PRICE_DISCOUNT_A_3;
     	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 == 0) {
     		sumItemsA = ((howManyItemA / DISCOUNT_A_5 )* PRICE_DISCOUNT_A_5);
+    	}else if(howManyItemA >= DISCOUNT_A_5 && howManyItemA % DISCOUNT_A_5 == 0) {
+    		
     	}
 		return sumItemsA;
 	}
 }
+
 
 
 
