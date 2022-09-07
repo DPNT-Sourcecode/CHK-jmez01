@@ -240,7 +240,3 @@ public class CheckOutSolutionTest {
 			id = CHK_R2_001, req = checkout("ABCDECBAABCABBAAAEEAA"), resp = 675*/
 	
 }
-
-
-
-
