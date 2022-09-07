@@ -70,7 +70,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountAAAA() {
+	public void testTotalItens_AAAA() {
 		
 		Integer actual = checkOutSolution.checkout("AAAA");
 		Integer expected = 180;
@@ -79,7 +79,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountAAAAA() {
+	public void testTotalItens_AAAAA() {
 		
 		Integer actual = checkOutSolution.checkout("AAAAA");
 		Integer expected = 230;
@@ -88,7 +88,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountB() {
+	public void testTotalItens_BB() {
 		
 		Integer actual = checkOutSolution.checkout("BB");
 		Integer expected = 45;
@@ -97,7 +97,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA_Plus() {
+	public void testTotalItens_AAAB() {
 		
 		Integer actual = checkOutSolution.checkout("AAAB");
 		Integer expected = 160;
@@ -106,7 +106,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA_DiscountB() {
+	public void testTotalItens_AAABB() {
 		
 		Integer actual = checkOutSolution.checkout("AAABB");
 		Integer expected = 175;
@@ -115,7 +115,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA_DiscountB_Plus() {
+	public void testTotalItens_AAABBCD() {
 		
 		Integer actual = checkOutSolution.checkout("AAABBCD");
 		Integer expected = 210;
@@ -124,7 +124,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA_DiscountA_AAAAAA() {
+	public void testTotalItens_AAAAAA() {
 		
 		Integer actual = checkOutSolution.checkout("AAAAAA");
 		Integer expected = 260;
@@ -132,7 +132,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA_DiscountB_BBB() {
+	public void testTotalItens_BBB() {
 		
 		Integer actual = checkOutSolution.checkout("BBB");
 		Integer expected = 75;
@@ -140,7 +140,7 @@ public class CheckOutSolutionTest {
 	}
 	
 	@Test
-	public void testTotalItens_DiscountA_DiscountB_BBBB() {
+	public void testTotalItens_BBBB() {
 		
 		Integer actual = checkOutSolution.checkout("BBBB");
 		Integer expected = 90;
@@ -148,13 +148,23 @@ public class CheckOutSolutionTest {
 	}		
 	
 	@Test
-	public void testTotalItens_DiscountA_DiscountB_ABCDABCD() {
+	public void testTotalItens_ABCDABCD() {
 		
 		Integer actual = checkOutSolution.checkout("ABCDABCD");
 		Integer expected = 215;
 		assertEquals(expected, actual);				
 	}	
+	
+	@Test
+	public void testTotalItens_ABCDCBAABCABBAAA() {
+		
+		Integer actual = checkOutSolution.checkout("ABCDABCD");
+		Integer expected = 505;
+		assertEquals(expected, actual);				
+	}	
+	
 
 
 }
+
 
